@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+    
+    
+    <main class="container-fluid"
+    >
+    
+    <div class="container p-5"> 
+      {% if  x == 'HR' or x == 'Financial_Dept' or x == 'Legal_affairs' or x == 'Legal_affairs' or x == 'Controlling_Dept' or x == 'Information_Technology' or x == 'Employee_Clinic' or x == 'Human_Resource' or x == 'Housing_Management' or x == 'Security' or x == 'E_Health' or x == 'Central_sterilization' or x == 'Nursing' or x == 'Medical_Services' or x == 'Support_Medical_Services' or x == 'Quality_and_patient_safety' or x == 'corporate_communication' or x == 'Academic_Affairs_and_Training' or x == 'KPI' or x == 'revenue_development' or x == 'Legal_Compliance' or x == 'shift_management' or x == 'patient_experience' or x == 'Medical_supplies' or x == 'HR' or x == 'financial_affairs' or x == 'Employment'  or x == 'Patient_affairs'  %}
+      <div class="rounded col-auto p-3 m-3 mt-5  butt" >
+        <!-- <h1> <i class="fa-solid fa-user-plus"></i></h1> -->
+        <p class="lead "  ><h3> طلبات الاقسام الادارية</h3> </p>
+        <a class="btn btn-lg btn-success newreq" href="{% url 'dept_check' slug='Administrator' %}" role="button" x>Check  &raquo;</a >
+      </div>
+      {% endif %}
+      {% if x == 'HR' or x == 'Financial_Dept' or x == 'Legal_affairs' or x == 'Legal_affairs' or x == 'Controlling_Dept' or x == 'Information_Technology' or x == 'Employee_Clinic' or x == 'Human_Resource' or x == 'Housing_Management' or x == 'Assistant_Medical_Servies' or x == 'Health_security' or x == 'Monitoring_the_regularity_of_human_resources' or x == 'Pharmacy_Dept' or x == 'Patient_affairs'  or x == 'E_Health' or x == 'Central_sterilization' or x == 'Nursing' or x == 'Medical_Services' or x == 'Support_Medical_Services' or x == 'Quality_and_patient_safety' or x == 'corporate_communication' or x == 'Academic_Affairs_and_Training' or x == 'KPI' or x == 'revenue_development' or x == 'Legal_Compliance' or x == 'shift_management' or x == 'patient_experience' or x == 'Medical_supplies' or x == 'HR' or x == 'financial_affairs' or x == 'Employment' %} 
+      <div class="  rounded col-auto p-3 m-3 mt-5 butt ">
+          <!-- <h1><i class="fa-solid fa-user-group"></i></h1> -->
+          <p class="lead"><h3>طلبات الاقسام الطبية</h3></p>
+          <a class="btn btn-lg btn-success newreq  "href="{% url 'dept_check' slug='Doctor' %}" role="button">Check &raquo;</a>
+        </div>
+      {% endif %}  
+      {% if  x == 'HR' or x == 'Financial_Dept' or x == 'Legal_affairs' or x == 'Legal_affairs' or x == 'Controlling_Dept' or x == 'Information_Technology' or x == 'Employee_Clinic' or x == 'Human_Resource' or x == 'Housing_Management'  or x == 'Nursing_director' or x == 'Health_security' or x == 'Monitoring_the_regularity_of_human_resources' or x == 'Pharmacy_Dept' or x == 'Patient_affairs'  or x == 'E_Health' or x == 'Central_sterilization' or x == 'Nursing' or x == 'Medical_Services' or x == 'Support_Medical_Services' or x == 'Quality_and_patient_safety' or x == 'corporate_communication' or x == 'Academic_Affairs_and_Training' or x == 'KPI' or x == 'revenue_development' or x == 'Legal_Compliance' or x == 'shift_management' or x == 'patient_experience' or x == 'Medical_supplies' or x == 'HR' or x == 'financial_affairs' or x == 'Employment' %}
+        <div class="  rounded col-auto p-3 m-3  mt-5 butt" >
+         
+          <!-- <h1><i class="fa-solid fa-bars-progress"></i></h1> -->
+          <p class="lead "  ><h3>طلبات اقسام التمريض</h3> </p>
+          <a class="btn btn-lg btn-success newreq" href="{% url 'dept_check' slug='Nursing' %}" role="button" x>Check &raquo;</a >
+        </div>
+      {% endif %} 
+      </div>
+      
+    </main>
+    
+{% endblock %}

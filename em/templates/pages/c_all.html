@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<hr>
+<div class="container-fluid col-md-8 offset-md-2 my-5 rounded border border-secondary">
+<table class="table  table-hover  ">
+    <thead>
+      <tr>
+        <th>Clearance number رقم الطلب</th>
+        <th>Status   حالة الطلب النهائية</th>
+        <th> Date created تاريخ الإنشاء</th>
+        <th>Check تحقق</th>
+        
+
+       
+      </tr>
+    </thead>
+    <tbody>
+      {% for form  in  form%}
+        <tr class="table-warning" >
+                    
+            <td >{{form.id}}</td>
+              {% if form.FinalStat == 'pending' %}
+              <td><i class="fa-solid fa-circle-minus text-warning" id="req"></i><b> pending</b></td>
+              {% elif form.FinalStat == 'approved'%}
+              <td ><i class="fa-solid fa-circle-check text-success" id="req" ></i> <b> approved</b></td>
+              {% else %}
+              <td><i class="fa-solid fa-circle-xmark text-danger" id="req"></i><b> rejected</b></td>
+              {% endif %}
+            <td>{{form.created}}</td> 
+            <td><a class="btn btn-sm btn-primary newreq" href="{% url 'c_currentstat' form.id form.classification %}" role="button" target="_blank">check  &raquo;</a ></td>
+              
+          </tr>
+          {% endfor %}
+    </tbody>
+    
+    <nav aria-label="...">
+      <ul class="pagination pagination-sm">
+        <li></li>
+        <li class="page-item disabled"> 
+          <span class="page-link">Previous</span> </li>
+          <li class="page-item active" aria-current="page"> <span class="page-link">1</span> </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+           
+            <li class="page-item"><a class="page-link" href="#">3</a></li> <li class="page-item"> 
+              <a class="page-link" href="#">Next</a>
+             </li>
+             </ul>
+            </nav>
+  </table>
+</div>
+
+
+
+{% endblock %}

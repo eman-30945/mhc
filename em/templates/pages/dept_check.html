@@ -1,0 +1,87 @@
+{% extends 'base.html'%} {% block content %}
+
+<h1 class="text-center font-weight-bold">Clearance List</h1>
+<div class="container">
+  <input
+    class="form-control"
+    id="myInput"
+    type="text"
+    placeholder="Search..  "
+  />
+  <br />
+  <table class="table table-bordered table-striped text-capitalize text-center">
+    <thead>
+      <tr>
+        <th>Clearance No. رقم الطلب</th>
+        <th>Name الاسم</th>
+        <th>Employee No. الرقم الوظيفي</th>
+        <th>Status حالة الطلب</th>
+        <th>Details تفاصيل الطلب</th>
+      </tr>
+    </thead>
+
+    {% for item1, item2 in form %}
+    <tbody id="myTable">
+      {% if check %}
+      <tr class="warning">
+        <td>{{item1.id}}</td>
+        <td>{{item1.Full_Name}}</td>
+        <td>{{item1.Employee_Number}}</td>
+
+        {% if item1.id == item2.IdOrder %} {% if item2.State %}
+        <td>Done</td>
+        {% else %}
+        <td>NotDone</td>
+        {% endif %} {% endif %}
+
+        <td>
+          <a
+            class="btn btn-md btn-primary newreq"
+            href="{% url 'dept_confirm' item1.classification item1.id %}"
+            role="button"
+            target="_blank"
+            >check &raquo;</a
+          >
+        </td>
+      </tr>
+      {% else %}
+       {% for id in Is_approved %}
+        {% if id.Path == "HR" and id.Option_dep == "approved" and id.IdOrder == item1.id%}
+      <tr class="warning">
+        <td>{{item1.id}}</td>
+        <td>{{item1.Full_Name}}</td>
+        <td>{{item1.Employee_Number}}</td>
+
+        {% if item1.id == item2.IdOrder %} {% if item2.State %}
+        <td>Done</td>
+        {% else %}
+        <td>NotDone</td>
+        {% endif %} {% endif %}
+
+        <td>
+          <a
+            class="btn btn-md btn-primary newreq"
+            href="{% url 'dept_confirm' item1.classification item1.id %}"
+            role="button"
+            target="_blank"
+            >check &raquo;</a
+          >
+        </td>
+      </tr>
+      {% endif %} {% endfor %} {% endif %} {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#myInput").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      });
+    });
+  });
+</script>
+
+{%endblock%}

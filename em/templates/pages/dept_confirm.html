@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+  {%  for d in DataE %}
+  <label for="fname"> <b> Full Name (الاسم الكامل)</b></label>
+    <input type="text" id="fname" name="fullname" placeholder="{{d.Full_Name}}" readonly required>
+
+          <label for="clearancetype" ><b>Clearance type (نوع الإخلاء) </b></label> <br>
+          <!-- <select id="reqt" name="clearancetype" readonly>
+           
+            <option value="annualvac">Annual Vacation إجازة سنوية </option>
+            <option value="compleave">Compensatory Leave إجازة تعويضية</option>
+            <option value="endservices">End of Services  نهاية الخدمة</option>
+            <option value="Assigned">Assigned تكليف </option>
+            <option value="Shift">Shift نقل </option>
+            <option value="dk">ايفاد</option>
+          </select> <br> -->
+          <input type="text" id="end-date" name="end"readonly placeholder="{{d.Clearance_Type}}" required> <br>
+  
+          <label for="eq">  رقم الإقرار </label> <br>
+    <input type="text" id="eq" name="eq" placeholder="{{d.Acknowledgment_Number}}" readonly > <br>
+
+    <label for="start-date">  <b> Start Dateتاريخ البداية </b></label> <br>
+<input type="text" id="start-date" name="Start" placeholder="{{d.Start_Date}}" readonly required> <br>
+
+<label for="end-date" class="form-control"> <b>End Date تاريخ النهاية</b> </label> 
+<input type="text" id="end-date" name="end"readonly placeholder="{{d.end_Date}}" required> <br>
+
+
+        <label for="jobtitle"> <b>Job Title (المسمى الوظيفي) </b> </label>
+        <!-- <select  id="jobtitle" class="form-control"  readonly >
+          <optgroup label=" Administrative Departments الأقسام الأدارية">
+          <option value="">اداري</option>
+          <option value="">Specialist اخصائي</option>
+          </optgroup>
+          <optgroup label=" Medical Departments الأقسام الطبية ">
+          <option value=""> Specialist اخصائي</option>
+          <option value="" > Consultant استشاري</option>
+          <option value="">Resident مقيم</option>
+
+          </optgroup>
+          <optgroup label="Nursing Departments أقسام التمريض">
+          <option value="">Specialist Nurse اخصائي تمريض</option>
+
+          </optgroup>
+
+
+
+    </select> -->
+    <input type="text" id="end-date" name="end"readonly placeholder="{{d.Job_Title}}" required> <br>
+
+          <label for="department" ><b> department (القسم) </b></label> <br>
+          <label for="dept_select">Choose your department</label>
+          <!-- <select id="dept_select" >
+          <option value="dis" disabled selected> اختر قسمك مما يلي ... </option>
+
+          <optgroup label="الصحة الإلكترونية">
+                        <option value="category-zero__1-option"> E-Health الصحة الإلكترونية </option>
+                      
+                    
+                     </optgroup>
+
+                      
+          <optgroup label="مكافحة العدوى (التعقيم المركزي)">
+              <option value="category-one__1-option">الصحة العامة</option>
+              <option value="category-one__2-option">التعقيم</option>
+              <option value="category-one__4-option">النفايات الطبية</option>
+                     </optgroup>
+           
+          <optgroup label="Nursing التمريض">
+              <option value="category-two__0-option">Nursing Office مكتب التمريض </option>
+              <option value="category-two__1-option">(M1) الحوامل </option>
+              <option value="category-two__2-option"> (M2) ما بعد الولادة الطبيعية </option>
+              <option value="category-two__3-option"> (M3)ما بعد الولادة القيصرية </option>
+              <option value="category-two__4-option"> (DR) كشك الولادة </option>
+              <option value="category-two__5-option"> (OR) العمليات</option>
+              <option value="category-two__6-option">ER الطوارئ </option>
+              <option value="category-two__7-option">NICO عناية حديثي الولادة </option>
+              <option value="category-two__8-option"> PICO عناية الأطفال </option>
+              <option value="category-two__9-option">Healthy Baby Unit وحدة الأطفال الأصحاء </option>
+              <option value="category-two__10-option">ICU عناية الكبار </option>
+              <option value="category-two__11-option">Gynecology أمراض النساء  </option>
+              <option value="category-two__12-option">OPD العيادات </option>
+
+                     </optgroup>
+          <optgroup label="Medical Services الخدمات الطبية ">
+              <option value="category-three__0-option">  OB-GYNEالنساءوالولادة</option>
+              <option value="category-three__1-option"> ICU العناية المركزة للكبار</option>
+              <option value="category-three__2-option">PICOالعناية المركزة للأطفال</option>
+              <option value="category-three__3-option">NICO العناية المركزة لحديثي الولادة</option>
+              <option value="category-three__5-option">التخديرAnestesia</option>
+              <option value="category-three__6-option">العلاج النفسي </option>
+              <option value="category-three__7-option">العمليات</option>
+              <option value="category-three__8-option">باطنية الأطفال</option>
+              <option value="category-three__9-option">جراحة الأطفال</option>
+               <option value="category-three__10-option">إدارة الأسرة</option>
+                <option value="category-three__11-option">المراجعة الاكلينيكية</option>
+                 <option value="category-three__12-option">الرعاية الصحية المنزلية</option>
+                  
+                     </optgroup>
+              
+          <optgroup label="Support Medical Services الخدمات الطبية المساعدة ">  
+
+      <option value="category-six__0-option"></option>
+              <option value="category-four__1-option">الرعاية الصيدلية </option>
+              <option value="category-four__2-option">خدمات التغذية</option>
+              <option value="category-four__3-option">التغذية السريرية</option>
+              <option value="category-four__4-option"> الأشعة</option>
+               <option value="category-four__5-option">المختبر و نقل الدم</option>
+                <option value="category-four__6-option">العلاج الطبيعي  </option>
+                 <option value="category-four__7-option"> التوعية الدينية</option>
+                
+                     </optgroup>
+         
+          <optgroup label=" الجودة و سلامة المرضى">
+              <option value="category-five__1-option">الجودة و سلامة المرضى</option>
+                     </optgroup>
+
+          <optgroup label="التواصل المؤسسي">
+              <option value="category-five__1-option">التواصل المؤسسي</option>
+                      </optgroup>
+
+          <optgroup label=" الشؤون الأكاديمية و التدريب">
+              <option value="category-six__1-option">الشؤون الأكاديمية و التدريب</option>
+                      </optgroup>
+
+          <optgroup label=" KPI التطوير و المشاريع ">
+              <option value="category-seven__1-option">التطوير و المشاريع </option>
+                       </optgroup>
+
+          <optgroup label=" تنمية الإرادات" >
+              <option value="category-eight__1-option">تنمية الإرادات </option>
+                        </optgroup>
+
+          <optgroup label="الشؤون القانونية و الإلتزام">
+              <option value="category-nine__1-option">الشؤون القانونية و الإلتزام</option>
+                        </optgroup>
+
+
+          <optgroup label="الإدارة المناوبة">
+              <option value="category-ten__1-option">الإدارةالمناوبة</option>
+                        </optgroup>
+
+          <optgroup label="تجربة المريض">
+              <option value="category-eleven__1-option">تجربة المريض</option>
+                        </optgroup>
+
+
+          <optgroup label="الإمداد و التموين الطبي">
+              <option value="category-twelve__1-option">المستودعات الطبية </option>
+              <option value="category-twelve__1-option">المستودعات غير الطبية </option>
+              <option value="category-twelve__1-option">التجهيزات </option>
+              <option value="category-twelve__1-option">المشتريات</option>
+              <option value="category-twelve__1-option">العقود</option>
+                        </optgroup>
+            
+          <optgroup label="الموارد البشرية ">
+              <option value="category-thirteen__1-option">الموارد البشرية </option>
+                        </optgroup>
+            
+
+          <optgroup label="الشؤون المالية ">
+              <option value="category-fourteen__1-option">الشؤون المالية </option>
+
+                        </optgroup>
+
+          <optgroup label="التشغيل">
+              <option value="category-fifteen__1-option">التشغيل</option>
+                        </optgroup>
+            
+
+   </select> -->
+   <input type="text" id="end-date" name="end"readonly placeholder="{{d.Department}}" required> <br>
+
+
+
+           </select>
+          <label for="id"> <b> Employee Number (الرقم الوظيفي)</b></label>
+          <input type="text" id="idnum" name="EmployeeNumber" placeholder="{{d.Employee_Number}}" readonly required> 
+          
+    <label for="fname"><b>Gender الجنس </b></label> 
+    <input type="text" id="idnum" name="EmployeeNumber" placeholder="{{d.Gender}}" readonly required> 
+
+    <br>
+    <!-- <select id="gender" name="gender" readonly>
+     
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+   
+
+    </select> -->
+
+    <label for="nat"><b> Nationality (الجنسية) </b></label>
+    <input type="text" id="nat" name="Nationality" placeholder="{{d.Nationality}}" readonly required>
+
+    <label for="phone"> <b> Phone Number (رقم الجوال)</b></label><br>
+    <input type="tel" name="phone" id="phone" placeholder="{{d.Phone_Number}}" readonly> <br> <br>
+
+    
+    <label for="subject"> <b> Notes (الملاحظات)</b></label><br>
+    <textarea id="subject" name="subject" placeholder="{{d.Notes}}" style="height:200px; width: 80%;" readonly ></textarea> <br>
+
+  
+  
+  {%endfor%}
+    <h1>Cofirm Clearance Status تأكيد حالة الطلب </h1>
+  
+      <form class="modal-content" method="POST">
+        <div class="container">
+          {% csrf_token  %}
+                <p>
+                  <input class="form-control" name="status2" type="text" placeholder={{request.user}}  readonly> 
+                    <p>
+                      <label for="status3">Clearance Status حالة الطلب </label>
+                <select id="status3" name="status3">
+                  <option value="approved">Approved  مقبول </option>
+                  <option value="pending">Pending معلق</option>
+                  {% if name == 'HR' %}
+                  <option value="rejection">rejection رفض</option>
+                  {% endif %}
+                  
+                </select>
+                <p class="full-width">
+                  <label for="">الرجاء كتابة السبب في حال الرفض او التعليق Please write the reason in the event of rejection or comment.</label>
+                  <textarea name="notess" id="" cols="30" rows="7"></textarea>
+                </p>
+    
+          <div class="clearfix">
+            <button type="reset" class="cancelbtn">Cancel إلغاء</button>
+            <button type="submit" class="signupbtn">Confirm تـأكيد</button> 
+          </div>
+        </div>
+      </form>
+    
+    
+  <br>
+    
+    </body>
+   
+
+
+{% endblock %}
