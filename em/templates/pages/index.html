@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+    <header>
+        <div>
+          <img src="{% static '/images/mat.jpeg'%}" alt="">
+        </div>
+        
+    </header>
+    
+    <main class="container-fluid"
+    >
+    
+    <div class="container p-5"> 
+      
+      <div class="rounded col-auto p-3 m-3 mt-5  butt" >
+        <h1> <i class="fa-solid fa-user-plus"></i></h1>
+        <p class="lead "  ><h3> إخلاء طرف جديد</h3> </p>
+        <a class="btn btn-lg btn-success newreq" href=" {% url 'emp_form' %} " role="button" target="_blank">New Clearance  &raquo;</a >
+      </div>
+      <div class="  rounded col-auto p-3 m-3 mt-5 butt ">
+          <h1><i class="fa-solid fa-user-group"></i></h1>
+          <p class="lead"><h3>تسجيل دخول الأقسام</h3></p>
+          <a class="btn btn-lg btn-success newreq  "href="{% url 'dept_log'%}" role="button">Login &raquo;</a>
+        </div>
+  
+        <div class="  rounded col-auto p-3 m-3  mt-5 butt" >
+         
+          <h1><i class="fa-solid fa-bars-progress"></i></h1>
+          <p class="lead "  ><h3> حالة الطلب</h3> </p>
+          <a class="btn btn-lg btn-success newreq" href="{% url 'c_empcheck'%}" role="button" target="_blank">Clearance Status &raquo;</a >
+        </div>
+      </div>
+        
+    </main>
+    
+{% endblock %}
