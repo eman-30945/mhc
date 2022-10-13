@@ -58,541 +58,547 @@ def emp_form(request):
 
         if job in ['اداري', 'Specialist اخصائي اداري']:
             Administrator.objects.create(
-                NumJob=EmployeeNumber, NameUser=fullname, Path='HR', Username="HR", IdOrder=IDN).save()
+                NumJob=EmployeeNumber, NameUser=fullname, Path='HR', Username="HR", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(
-                NumJob=EmployeeNumber, NameUser=fullname, Path='المالية Finaneial Dept', Username="Financial_Dept", IdOrder=IDN).save()
+                NumJob=EmployeeNumber, NameUser=fullname, Path='المالية Finaneial Dept', Username="Financial_Dept", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون القانونية والالتزام Legal affairs', Username="Legal_affairs", IdOrder=IDN).save()
+                                         Path='الشؤون القانونية والالتزام Legal affairs', Username="Legal_affairs", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='مراقبة المخزون Controlling Dept', Username="Controlling_Dept", IdOrder=IDN).save()
+                                         Path='مراقبة المخزون Controlling Dept', Username="Controlling_Dept", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(
-                NumJob=EmployeeNumber, NameUser=fullname, Path='الامن   security', Username="Security", IdOrder=IDN).save()
+                NumJob=EmployeeNumber, NameUser=fullname, Path='الامن   security', Username="Security", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الصحة الالكترونية Information Technology', Username="Information_Technology", IdOrder=IDN).save()
+                                         Path='الصحة الالكترونية Information Technology', Username="Information_Technology", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(
-                NumJob=EmployeeNumber, NameUser=fullname, Path='صحة العاملين Employee Clinic', Username="Employee_Clinic", IdOrder=IDN).save()
+                NumJob=EmployeeNumber, NameUser=fullname, Path='صحة العاملين Employee Clinic', Username="Employee_Clinic", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الموارد البشرية Human Resourse', Username="Human_Resource", IdOrder=IDN).save()
+                                         Path='الموارد البشرية Human Resourse', Username="Human_Resource", IdOrder=IDN, class_cation=classific).save()
             Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='إدارة السكن Housing Management ', Username="Housing_Management", IdOrder=IDN).save()
+                                         Path='إدارة السكن Housing Management ', Username="Housing_Management", IdOrder=IDN, class_cation=classific).save()
+            Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
+                                         Path='مدير المستشفى hospital manager', Username="hospital_manager", IdOrder=IDN, class_cation=classific).save()
             if department == 'E-Health الصحة الإلكترونية ':
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                                      Path='E-Health الصحة الإلكترونية ', Username="E_Health", IdOrder=IDN).save()
+                                         Path='E-Health الصحة الإلكترونية ', Username="E_Health", IdOrder=IDN, class_cation=classific).save()
             elif department == 'التعقيم':
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التعقيم', Username="Central_sterilization", IdOrder=IDN).save() 
+                                         Path='التعقيم', Username="Central_sterilization", IdOrder=IDN, class_cation=classific).save() 
             elif department == 'النفايات الطبية':
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='النفايات الطبية', Username="Central_sterilization", IdOrder=IDN).save() 
+                                         Path='النفايات الطبية', Username="Central_sterilization", IdOrder=IDN, class_cation=classific).save() 
             elif department == 'Nursing Office مكتب التمريض ':
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Nursing Office مكتب التمريض ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Nursing Office مكتب التمريض ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(M1) الحوامل ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(M1) الحوامل ', Username="Nursing", IdOrder=IDN).save()
+                                         Path='(M1) الحوامل ', Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == "(M2) ما بعد الولادة الطبيعية ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(M2) ما بعد الولادة الطبيعية ', Username="Nursing", IdOrder=IDN).save()
+                                         Path='(M2) ما بعد الولادة الطبيعية ', Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == " (M3)ما بعد الولادة القيصرية ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path=' (M3)ما بعد الولادة القيصرية ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path=' (M3)ما بعد الولادة القيصرية ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(DR) كشك الولادة ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(DR) كشك الولادة ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='(DR) كشك الولادة ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(OR) العمليات":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(OR) العمليات', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='(OR) العمليات', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ER الطوارئ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path="ER الطوارئ", Username="Nursing", IdOrder=IDN).save()
+                                         Path="ER الطوارئ", Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == "NICO عناية حديثي الولادة ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='NICO عناية حديثي الولادة ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='NICO عناية حديثي الولادة ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == " PICO عناية الأطفال ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path=' PICO عناية الأطفال ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path=' PICO عناية الأطفال ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "Healthy Baby Unit وحدة الأطفال الأصحاء ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Healthy Baby Unit وحدة الأطفال الأصحاء ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Healthy Baby Unit وحدة الأطفال الأصحاء ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ICU عناية الكبار ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='ICU عناية الكبار ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='ICU عناية الكبار ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "Gynecology أمراض النساء ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Gynecology أمراض النساء ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Gynecology أمراض النساء ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "OPD العيادات ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='OPD العيادات  ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='OPD العيادات  ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "OB-GYNEالنساءوالولادة":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='OB-GYNEالنساءوالولادة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='OB-GYNEالنساءوالولادة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ICU العناية المركزة للكبار":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='ICU العناية المركزة للكبار', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='ICU العناية المركزة للكبار', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "PICOالعناية المركزة للأطفال":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='PICOالعناية المركزة للأطفال', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='PICOالعناية المركزة للأطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "NICO العناية المركزة لحديثي الولادة":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='NICO العناية المركزة لحديثي الولادة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='NICO العناية المركزة لحديثي الولادة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التخديرAnestesia":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التخديرAnestesia', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='التخديرAnestesia', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العلاج النفسي ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العلاج النفسي ', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='العلاج النفسي ', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العمليات":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العمليات', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='العمليات', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "باطنية الأطفال":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='باطنية الأطفال', Username="Medical_Services", IdOrder=IDN).save()
+                                         Path='باطنية الأطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save()
             elif department == "جراجة الاطفال":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='جراجة الاطفال', Username="Medical_Services", IdOrder=IDN).save()
+                                         Path='جراجة الاطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save()
             elif department == "إدارة الأسرة":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='إدارة الأسرة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='إدارة الأسرة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المراجعة الاكلينيكية":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المراجعة الاكلينيكية', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='المراجعة الاكلينيكية', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الرعاية الصحية المنزلية":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الرعاية الصحية المنزلية', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='الرعاية الصحية المنزلية', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الرعاية الصيدلية ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الرعاية الصيدلية ', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='الرعاية الصيدلية ', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "خدمات التغذية":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='خدمات التغذية', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='خدمات التغذية', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التغذية السريريه":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التغذية السريريه', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='التغذية السريريه', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الاشعة":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الاشعة', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='الاشعة', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المختبر و نقل الدم":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المختبر و نقل الدم', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='المختبر و نقل الدم', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العلاج الطبيعي ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العلاج الطبيعي ', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='العلاج الطبيعي ', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التوعية الدينية":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التوعية الدينية', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='التوعية الدينية', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الجودة وسلامة المرضى":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الجودة وسلامة المرضى', Username="Quality_and_patient_safety", IdOrder=IDN).save() 
+                                         Path='الجودة وسلامة المرضى', Username="Quality_and_patient_safety", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التواصل المؤسسي":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التواصل المؤسسي', Username="corporate_communication", IdOrder=IDN).save() 
+                                         Path='التواصل المؤسسي', Username="corporate_communication", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون الأكاديمية و التدريب":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون الأكاديمية و التدريب', Username="Academic_Affairs_and_Training", IdOrder=IDN).save() 
+                                         Path='الشؤون الأكاديمية و التدريب', Username="Academic_Affairs_and_Training", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التطوير و المشاريع ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التطوير و المشاريع ', Username="KPI", IdOrder=IDN).save() 
+                                         Path='التطوير و المشاريع ', Username="KPI", IdOrder=IDN, class_cation=classific).save() 
             elif department == "تنمية الإرادات":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='تنمية الإرادات', Username="revenue_development", IdOrder=IDN).save() 
+                                         Path='تنمية الإرادات', Username="revenue_development", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون القانونية و الإلتزام":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون القانونية و الإلتزام', Username="Legal_Compliance", IdOrder=IDN).save() 
+                                         Path='الشؤون القانونية و الإلتزام', Username="Legal_Compliance", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الادارة المناوبة":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الادارة المناوبة', Username="shift_management", IdOrder=IDN).save() 
+                                         Path='الادارة المناوبة', Username="shift_management", IdOrder=IDN, class_cation=classific).save() 
             elif department == "تجربة المريض":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='تجربة المريض', Username="patient_experience", IdOrder=IDN).save() 
+                                         Path='تجربة المريض', Username="patient_experience", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المستودعات الطبية":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المستودعات الطبية', Username="Medical_supplies", IdOrder=IDN).save()
+                                         Path='المستودعات الطبية', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save()
             elif department == "المستودعات غير الطبية ":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المستودعات غير الطبية ', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='المستودعات غير الطبية ', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التجهيزات":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التجهيزات', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='التجهيزات', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المشتريات":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المشتريات', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='المشتريات', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العقود":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العقود', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='العقود', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الموارد البشرية":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الموارد البشرية', Username="HR", IdOrder=IDN).save() 
+                                         Path='الموارد البشرية', Username="HR", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون المالية":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون المالية', Username="financial_affairs", IdOrder=IDN).save() 
+                                         Path='الشؤون المالية', Username="financial_affairs", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التشغيل":
                  Administrator.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التشغيل', Username="Employment", IdOrder=IDN).save()   
+                                         Path='التشغيل', Username="Employment", IdOrder=IDN, class_cation=classific).save()   
             
             
         elif job == 'Specialist Nurse اخصائي تمريض':
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='HR', Username="HR", IdOrder=IDN).save()
+                                   Path='HR', Username="HR", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='رئيسة التمريض Nursing director', Username="Nursing_director", IdOrder=IDN).save()
+                                   Path='رئيسة التمريض Nursing director', Username="Nursing_director", IdOrder=IDN, class_cation=classific).save()
            
             Nursing.objects.create(
-                NumJob=EmployeeNumber, NameUser=fullname, Path='المالية Finaneial Dept', Username="Financial_Dept", IdOrder=IDN).save()
+                NumJob=EmployeeNumber, NameUser=fullname, Path='المالية Finaneial Dept', Username="Financial_Dept", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='الشؤون القانونية والالتزام Legal affairs', Username="Legal_affairs", IdOrder=IDN).save()
+                                   Path='الشؤون القانونية والالتزام Legal affairs', Username="Legal_affairs", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='مراقبة المخزون Controlling Dept', Username="Controlling_Dept", IdOrder=IDN).save()
+                                   Path='مراقبة المخزون Controlling Dept', Username="Controlling_Dept", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='الامن الصحي Health security', Username="Health_security", IdOrder=IDN).save()
+                                   Path='الامن الصحي Health security', Username="Health_security", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='صحة العاملين Employee Clinic', Username="Employee_Clinic", IdOrder=IDN).save()
+                                   Path='صحة العاملين Employee Clinic', Username="Employee_Clinic", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='الموارد البشرية Human Resourse', Username="Human_Resource", IdOrder=IDN).save()
+                                   Path='الموارد البشرية Human Resourse', Username="Human_Resource", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='إدارة السكن Housing Management', Username="Housing_Management", IdOrder=IDN).save()
+                                   Path='إدارة السكن Housing Management', Username="Housing_Management", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(
-                NumJob=EmployeeNumber, NameUser=fullname, Path='الصيدلية Pharmacy Dept', Username="Pharmacy_Dept", IdOrder=IDN).save()
+                NumJob=EmployeeNumber, NameUser=fullname, Path='الصيدلية Pharmacy Dept', Username="Pharmacy_Dept", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='مراقبة انتظام دوام الموارد البشرية Monitoring the regularity of human resources', Username="Monitoring_the_regularity_of_human_resources", IdOrder=IDN).save()
+                                   Path='مراقبة انتظام دوام الموارد البشرية Monitoring the regularity of human resources', Username="Monitoring_the_regularity_of_human_resources", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='الصحة الالكترونية Information Technology', Username="Information_Technology", IdOrder=IDN).save()
+                                   Path='الصحة الالكترونية Information Technology', Username="Information_Technology", IdOrder=IDN, class_cation=classific).save()
             Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                   Path='شؤون المرضى Patient affairs', Username="Patient_affairs", IdOrder=IDN).save()
+                                   Path='شؤون المرضى Patient affairs', Username="Patient_affairs", IdOrder=IDN, class_cation=classific).save()
+            Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
+                                         Path='مدير المستشفى hospital manager', Username="hospital_manager", IdOrder=IDN, class_cation=classific).save()
             if department == 'E-Health الصحة الإلكترونية ':
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                                      Path='E-Health الصحة الإلكترونية ', Username="E_Health", IdOrder=IDN).save()
+                                                      Path='E-Health الصحة الإلكترونية ', Username="E_Health", IdOrder=IDN, class_cation=classific).save()
             elif department == 'التعقيم':
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التعقيم', Username="Central_sterilization", IdOrder=IDN).save() 
+                                         Path='التعقيم', Username="Central_sterilization", IdOrder=IDN, class_cation=classific).save() 
             elif department == 'النفايات الطبية':
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='النفايات الطبية', Username="Central_sterilization", IdOrder=IDN).save() 
+                                         Path='النفايات الطبية', Username="Central_sterilization", IdOrder=IDN, class_cation=classific).save() 
             elif department == 'Nursing Office مكتب التمريض ':
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Nursing Office مكتب التمريض ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Nursing Office مكتب التمريض ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(M1) الحوامل ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(M1) الحوامل ', Username="Nursing", IdOrder=IDN).save()
+                                         Path='(M1) الحوامل ', Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == "(M2) ما بعد الولادة الطبيعية ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(M2) ما بعد الولادة الطبيعية ', Username="Nursing", IdOrder=IDN).save()
+                                         Path='(M2) ما بعد الولادة الطبيعية ', Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == " (M3)ما بعد الولادة القيصرية ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path=' (M3)ما بعد الولادة القيصرية ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path=' (M3)ما بعد الولادة القيصرية ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(DR) كشك الولادة ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(DR) كشك الولادة ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='(DR) كشك الولادة ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(OR) العمليات":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(OR) العمليات', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='(OR) العمليات', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ER الطوارئ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path="ER الطوارئ", Username="Nursing", IdOrder=IDN).save()
+                                         Path="ER الطوارئ", Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == "NICO عناية حديثي الولادة ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='NICO عناية حديثي الولادة ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='NICO عناية حديثي الولادة ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == " PICO عناية الأطفال ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path=' PICO عناية الأطفال ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path=' PICO عناية الأطفال ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "Healthy Baby Unit وحدة الأطفال الأصحاء ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Healthy Baby Unit وحدة الأطفال الأصحاء ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Healthy Baby Unit وحدة الأطفال الأصحاء ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ICU عناية الكبار ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='ICU عناية الكبار ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='ICU عناية الكبار ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "Gynecology أمراض النساء ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Gynecology أمراض النساء ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Gynecology أمراض النساء ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "OPD العيادات ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='OPD العيادات  ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='OPD العيادات  ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "OB-GYNEالنساءوالولادة":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='OB-GYNEالنساءوالولادة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='OB-GYNEالنساءوالولادة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ICU العناية المركزة للكبار":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='ICU العناية المركزة للكبار', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='ICU العناية المركزة للكبار', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "PICOالعناية المركزة للأطفال":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='PICOالعناية المركزة للأطفال', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='PICOالعناية المركزة للأطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "NICO العناية المركزة لحديثي الولادة":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='NICO العناية المركزة لحديثي الولادة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='NICO العناية المركزة لحديثي الولادة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التخديرAnestesia":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التخديرAnestesia', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='التخديرAnestesia', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العلاج النفسي ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العلاج النفسي ', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='العلاج النفسي ', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العمليات":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العمليات', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='العمليات', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "باطنية الأطفال":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='باطنية الأطفال', Username="Medical_Services", IdOrder=IDN).save()
+                                         Path='باطنية الأطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save()
             elif department == "جراجة الاطفال":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='جراجة الاطفال', Username="Medical_Services", IdOrder=IDN).save()
+                                         Path='جراجة الاطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save()
             elif department == "إدارة الأسرة":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='إدارة الأسرة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='إدارة الأسرة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المراجعة الاكلينيكية":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المراجعة الاكلينيكية', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='المراجعة الاكلينيكية', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الرعاية الصحية المنزلية":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الرعاية الصحية المنزلية', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='الرعاية الصحية المنزلية', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الرعاية الصيدلية ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الرعاية الصيدلية ', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='الرعاية الصيدلية ', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "خدمات التغذية":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='خدمات التغذية', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='خدمات التغذية', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التغذية السريريه":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التغذية السريريه', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='التغذية السريريه', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الاشعة":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الاشعة', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='الاشعة', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المختبر و نقل الدم":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المختبر و نقل الدم', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='المختبر و نقل الدم', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العلاج الطبيعي ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العلاج الطبيعي ', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='العلاج الطبيعي ', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التوعية الدينية":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التوعية الدينية', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='التوعية الدينية', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الجودة وسلامة المرضى":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الجودة وسلامة المرضى', Username="Quality_and_patient_safety", IdOrder=IDN).save() 
+                                         Path='الجودة وسلامة المرضى', Username="Quality_and_patient_safety", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التواصل المؤسسي":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التواصل المؤسسي', Username="corporate_communication", IdOrder=IDN).save() 
+                                         Path='التواصل المؤسسي', Username="corporate_communication", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون الأكاديمية و التدريب":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون الأكاديمية و التدريب', Username="Academic_Affairs_and_Training", IdOrder=IDN).save() 
+                                         Path='الشؤون الأكاديمية و التدريب', Username="Academic_Affairs_and_Training", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التطوير و المشاريع ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التطوير و المشاريع ', Username="KPI", IdOrder=IDN).save() 
+                                         Path='التطوير و المشاريع ', Username="KPI", IdOrder=IDN, class_cation=classific).save() 
             elif department == "تنمية الإرادات":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='تنمية الإرادات', Username="revenue_development", IdOrder=IDN).save() 
+                                         Path='تنمية الإرادات', Username="revenue_development", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون القانونية و الإلتزام":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون القانونية و الإلتزام', Username="Legal_Compliance", IdOrder=IDN).save() 
+                                         Path='الشؤون القانونية و الإلتزام', Username="Legal_Compliance", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الادارة المناوبة":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الادارة المناوبة', Username="shift_management", IdOrder=IDN).save() 
+                                         Path='الادارة المناوبة', Username="shift_management", IdOrder=IDN, class_cation=classific).save() 
             elif department == "تجربة المريض":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='تجربة المريض', Username="patient_experience", IdOrder=IDN).save() 
+                                         Path='تجربة المريض', Username="patient_experience", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المستودعات الطبية":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المستودعات الطبية', Username="Medical_supplies", IdOrder=IDN).save()
+                                         Path='المستودعات الطبية', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save()
             elif department == "المستودعات غير الطبية ":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المستودعات غير الطبية ', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='المستودعات غير الطبية ', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التجهيزات":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التجهيزات', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='التجهيزات', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المشتريات":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المشتريات', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='المشتريات', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العقود":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العقود', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='العقود', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الموارد البشرية":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الموارد البشرية', Username="HR", IdOrder=IDN).save() 
+                                         Path='الموارد البشرية', Username="HR", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون المالية":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون المالية', Username="financial_affairs", IdOrder=IDN).save() 
+                                         Path='الشؤون المالية', Username="financial_affairs", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التشغيل":
                  Nursing.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التشغيل', Username="Employment", IdOrder=IDN).save()   
+                                         Path='التشغيل', Username="Employment", IdOrder=IDN, class_cation=classific).save()   
 
         else:
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='HR', Username="HR", IdOrder=IDN).save()
+                                  Path='HR', Username="HR", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='المساعد للخدمات الطبية Assistant Medical Servies', Username="Assistant_Medical_Servies", IdOrder=IDN).save()
+                                  Path='المساعد للخدمات الطبية Assistant Medical Servies', Username="Assistant_Medical_Servies", IdOrder=IDN, class_cation=classific).save()
             
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='المالية Finaneial Dept', Username="Financial_Dept", IdOrder=IDN).save()
+                                  Path='المالية Finaneial Dept', Username="Financial_Dept", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='الشؤون القانونية والالتزام Legal affairs', Username="Legal_affairs", IdOrder=IDN).save()
+                                  Path='الشؤون القانونية والالتزام Legal affairs', Username="Legal_affairs", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='مراقبة المخزون Controlling Dept', Username="Controlling_Dept", IdOrder=IDN).save()
+                                  Path='مراقبة المخزون Controlling Dept', Username="Controlling_Dept", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='الامن الصحي Health security', Username="Health_security", IdOrder=IDN).save()
+                                  Path='الامن الصحي Health security', Username="Health_security", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='صحة العاملين Employee Clinic', Username="Employee_Clinic", IdOrder=IDN).save()
+                                  Path='صحة العاملين Employee Clinic', Username="Employee_Clinic", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='الموارد البشرية Human Resourse', Username="Human_Resource", IdOrder=IDN).save()
+                                  Path='الموارد البشرية Human Resourse', Username="Human_Resource", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='إدارة السكن Housing Management', Username="Housing_Management", IdOrder=IDN).save()
+                                  Path='إدارة السكن Housing Management', Username="Housing_Management", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='الصيدلية Pharmacy Dept', Username="Pharmacy_Dept", IdOrder=IDN).save()
+                                  Path='الصيدلية Pharmacy Dept', Username="Pharmacy_Dept", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='مراقبة انتظام دوام الموارد البشرية Monitoring the regularity of human resources', Username="Monitoring_the_regularity_of_human_resources", IdOrder=IDN).save()
+                                  Path='مراقبة انتظام دوام الموارد البشرية Monitoring the regularity of human resources', Username="Monitoring_the_regularity_of_human_resources", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='الصحة الالكترونية Information Technology', Username="Information_Technology", IdOrder=IDN).save()
+                                  Path='الصحة الالكترونية Information Technology', Username="Information_Technology", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                  Path='شؤون المرضى Patient affairs', Username="Patient_affairs", IdOrder=IDN).save()
+                                  Path='شؤون المرضى Patient affairs', Username="Patient_affairs", IdOrder=IDN, class_cation=classific).save()
+            Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
+                                         Path='مدير المستشفى hospital manager', Username="hospital_manager", IdOrder=IDN, class_cation=classific).save()
             if department == 'E-Health الصحة الإلكترونية ':
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                                      Path='E-Health الصحة الإلكترونية ', Username="E_Health", IdOrder=IDN).save()
+                                                      Path='E-Health الصحة الإلكترونية ', Username="E_Health", IdOrder=IDN, class_cation=classific).save()
             elif department == 'التعقيم':
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التعقيم', Username="Central_sterilization", IdOrder=IDN).save() 
+                                         Path='التعقيم', Username="Central_sterilization", IdOrder=IDN, class_cation=classific).save() 
             elif department == 'النفايات الطبية':
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='النفايات الطبية', Username="Central_sterilization", IdOrder=IDN).save() 
+                                         Path='النفايات الطبية', Username="Central_sterilization", IdOrder=IDN, class_cation=classific).save() 
             elif department == 'Doctor Office مكتب التمريض ':
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Doctor Office مكتب التمريض ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Doctor Office مكتب التمريض ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(M1) الحوامل ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(M1) الحوامل ', Username="Nursing", IdOrder=IDN).save()
+                                         Path='(M1) الحوامل ', Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == "(M2) ما بعد الولادة الطبيعية ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(M2) ما بعد الولادة الطبيعية ', Username="Nursing", IdOrder=IDN).save()
+                                         Path='(M2) ما بعد الولادة الطبيعية ', Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == " (M3)ما بعد الولادة القيصرية ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path=' (M3)ما بعد الولادة القيصرية ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path=' (M3)ما بعد الولادة القيصرية ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(DR) كشك الولادة ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(DR) كشك الولادة ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='(DR) كشك الولادة ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "(OR) العمليات":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='(OR) العمليات', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='(OR) العمليات', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ER الطوارئ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path="ER الطوارئ", Username="Nursing", IdOrder=IDN).save()
+                                         Path="ER الطوارئ", Username="Nursing", IdOrder=IDN, class_cation=classific).save()
             elif department == "NICO عناية حديثي الولادة ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='NICO عناية حديثي الولادة ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='NICO عناية حديثي الولادة ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == " PICO عناية الأطفال ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path=' PICO عناية الأطفال ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path=' PICO عناية الأطفال ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "Healthy Baby Unit وحدة الأطفال الأصحاء ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Healthy Baby Unit وحدة الأطفال الأصحاء ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Healthy Baby Unit وحدة الأطفال الأصحاء ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ICU عناية الكبار ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='ICU عناية الكبار ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='ICU عناية الكبار ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "Gynecology أمراض النساء ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='Gynecology أمراض النساء ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='Gynecology أمراض النساء ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "OPD العيادات ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='OPD العيادات  ', Username="Nursing", IdOrder=IDN).save() 
+                                         Path='OPD العيادات  ', Username="Nursing", IdOrder=IDN, class_cation=classific).save() 
             elif department == "OB-GYNEالنساءوالولادة":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='OB-GYNEالنساءوالولادة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='OB-GYNEالنساءوالولادة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "ICU العناية المركزة للكبار":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='ICU العناية المركزة للكبار', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='ICU العناية المركزة للكبار', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "PICOالعناية المركزة للأطفال":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='PICOالعناية المركزة للأطفال', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='PICOالعناية المركزة للأطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "NICO العناية المركزة لحديثي الولادة":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='NICO العناية المركزة لحديثي الولادة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='NICO العناية المركزة لحديثي الولادة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التخديرAnestesia":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التخديرAnestesia', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='التخديرAnestesia', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العلاج النفسي ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العلاج النفسي ', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='العلاج النفسي ', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العمليات":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العمليات', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='العمليات', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "باطنية الأطفال":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='باطنية الأطفال', Username="Medical_Services", IdOrder=IDN).save()
+                                         Path='باطنية الأطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save()
             elif department == "جراجة الاطفال":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='جراجة الاطفال', Username="Medical_Services", IdOrder=IDN).save()
+                                         Path='جراجة الاطفال', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save()
             elif department == "إدارة الأسرة":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='إدارة الأسرة', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='إدارة الأسرة', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المراجعة الاكلينيكية":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المراجعة الاكلينيكية', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='المراجعة الاكلينيكية', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الرعاية الصحية المنزلية":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الرعاية الصحية المنزلية', Username="Medical_Services", IdOrder=IDN).save() 
+                                         Path='الرعاية الصحية المنزلية', Username="Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الرعاية الصيدلية ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الرعاية الصيدلية ', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='الرعاية الصيدلية ', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "خدمات التغذية":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='خدمات التغذية', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='خدمات التغذية', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التغذية السريريه":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التغذية السريريه', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='التغذية السريريه', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الاشعة":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الاشعة', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='الاشعة', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المختبر و نقل الدم":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المختبر و نقل الدم', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='المختبر و نقل الدم', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العلاج الطبيعي ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العلاج الطبيعي ', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='العلاج الطبيعي ', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التوعية الدينية":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التوعية الدينية', Username="Support_Medical_Services", IdOrder=IDN).save() 
+                                         Path='التوعية الدينية', Username="Support_Medical_Services", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الجودة وسلامة المرضى":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الجودة وسلامة المرضى', Username="Quality_and_patient_safety", IdOrder=IDN).save() 
+                                         Path='الجودة وسلامة المرضى', Username="Quality_and_patient_safety", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التواصل المؤسسي":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التواصل المؤسسي', Username="corporate_communication", IdOrder=IDN).save() 
+                                         Path='التواصل المؤسسي', Username="corporate_communication", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون الأكاديمية و التدريب":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون الأكاديمية و التدريب', Username="Academic_Affairs_and_Training", IdOrder=IDN).save() 
+                                         Path='الشؤون الأكاديمية و التدريب', Username="Academic_Affairs_and_Training", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التطوير و المشاريع ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التطوير و المشاريع ', Username="KPI", IdOrder=IDN).save() 
+                                         Path='التطوير و المشاريع ', Username="KPI", IdOrder=IDN, class_cation=classific).save() 
             elif department == "تنمية الإرادات":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='تنمية الإرادات', Username="revenue_development", IdOrder=IDN).save() 
+                                         Path='تنمية الإرادات', Username="revenue_development", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون القانونية و الإلتزام":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون القانونية و الإلتزام', Username="Legal_Compliance", IdOrder=IDN).save() 
+                                         Path='الشؤون القانونية و الإلتزام', Username="Legal_Compliance", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الادارة المناوبة":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الادارة المناوبة', Username="shift_management", IdOrder=IDN).save() 
+                                         Path='الادارة المناوبة', Username="shift_management", IdOrder=IDN, class_cation=classific).save() 
             elif department == "تجربة المريض":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='تجربة المريض', Username="patient_experience", IdOrder=IDN).save() 
+                                         Path='تجربة المريض', Username="patient_experience", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المستودعات الطبية":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المستودعات الطبية', Username="Medical_supplies", IdOrder=IDN).save()
+                                         Path='المستودعات الطبية', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save()
             elif department == "المستودعات غير الطبية ":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المستودعات غير الطبية ', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='المستودعات غير الطبية ', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التجهيزات":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التجهيزات', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='التجهيزات', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "المشتريات":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='المشتريات', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='المشتريات', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "العقود":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='العقود', Username="Medical_supplies", IdOrder=IDN).save() 
+                                         Path='العقود', Username="Medical_supplies", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الموارد البشرية":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الموارد البشرية', Username="HR", IdOrder=IDN).save() 
+                                         Path='الموارد البشرية', Username="HR", IdOrder=IDN, class_cation=classific).save() 
             elif department == "الشؤون المالية":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='الشؤون المالية', Username="financial_affairs", IdOrder=IDN).save() 
+                                         Path='الشؤون المالية', Username="financial_affairs", IdOrder=IDN, class_cation=classific).save() 
             elif department == "التشغيل":
                  Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
-                                         Path='التشغيل', Username="Employment", IdOrder=IDN).save() 
+                                         Path='التشغيل', Username="Employment", IdOrder=IDN, class_cation=classific).save() 
 
         return render(request, 'pages/emp_form.html')
 
@@ -667,32 +673,29 @@ def dept_confirm(request, slug, id):
 
 
 def dept_check(request, slug):
-    form = Employee_form.objects.filter(classification=slug)
+    
     if slug == 'Administrator':
         formstate = Administrator.objects.filter(Username=str(request.user))
     elif slug == 'Doctor':
         formstate = Doctor.objects.filter(Username=str(request.user))
     else:
         formstate = Nursing.objects.filter(Username=str(request.user))
-    mylist = zip(form, formstate)
-    idorder = 0
-    for x in formstate:
-        idorder = x.IdOrder
-        break
+
     if slug == 'Administrator':
         formstate1 = Administrator.objects.filter()
     elif slug == 'Doctor':
         formstate1 = Doctor.objects.filter()
     else:
         formstate1 = Nursing.objects.filter()
-    
+
     context = {
-        'form': mylist,
-        'check' : str(request.user) == "HR", 
-        "Is_approved" : formstate1,
+        'form': formstate,
+        'check': str(request.user) == "HR",
+        "Is_approved": formstate1,
     }
-    
-    return render(request, 'pages/dept_check.html' , context)
+
+    return render(request, 'pages/dept_check.html', context)
+
 
 
 def c_empcheck(request):
@@ -715,7 +718,8 @@ def c_currentstat(request, id, slug):
 
 
 def c_all(request, id):
-    step1 = Employee_form.objects.filter(Employee_Number=id)
+    
+    step1 = Employee_form.objects.filter(Employee_Number = id)
     for x in step1:
         if x.classification == 'Administrator':
             check = False
@@ -794,6 +798,8 @@ def c_all(request, id):
         "form": step1,
         'name': str(request.user),
     }
+    for x in step1:
+         print(x)
     return render(request, 'pages/c_all.html', context)
 
 

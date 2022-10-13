@@ -376,6 +376,7 @@ class Nursing(models.Model):
     Notes = models.TextField(null= True , blank=True)
     Username = models.CharField(max_length=20,null= True , blank=True )
     created = models.DateTimeField(default=datetime.now() , blank=True)
+    class_cation = models.CharField(max_length=20,null= True , blank=True )
     
         
         
@@ -395,7 +396,7 @@ class Doctor(models.Model):
     Notes = models.TextField(null= True , blank=True)
     Username = models.CharField(max_length=20,null= True , blank=True )
     created = models.DateTimeField(default=datetime.now() , blank=True)
-    
+    class_cation = models.CharField(max_length=20,null= True , blank=True )
         
         
 class Administrator(models.Model):
@@ -414,6 +415,6 @@ class Administrator(models.Model):
     Notes = models.TextField(null= True , blank=True)
     Username = models.CharField(max_length=20,null= True , blank=True )
     created = models.DateTimeField(default=datetime.now() , blank=True)
-    
+    class_cation = models.CharField(max_length=20,null= True , blank=True )
         
 

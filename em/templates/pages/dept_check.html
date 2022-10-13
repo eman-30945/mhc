@@ -1,4 +1,5 @@
-{% extends 'base.html'%} {% block content %}
+{% extends 'base.html'%}
+ {% block content %}
 
 <h1 class="text-center font-weight-bold">Clearance List</h1>
 <div class="container">
@@ -20,24 +21,26 @@
       </tr>
     </thead>
 
-    {% for item1, item2 in form %}
+    {% for item1 in form %}
     <tbody id="myTable">
       {% if check %}
       <tr class="warning">
-        <td>{{item1.id}}</td>
-        <td>{{item1.Full_Name}}</td>
-        <td>{{item1.Employee_Number}}</td>
-
-        {% if item1.id == item2.IdOrder %} {% if item2.State %}
-        <td>Done</td>
-        {% else %}
-        <td>NotDone</td>
-        {% endif %} {% endif %}
+        <td>{{item1.IdOrder}}</td>
+        <td>{{item1.NameUser}}</td>
+        <td>{{item1.NumJob}}</td>
+        
+        
+          {% if item1.State %}
+          <td>Done</td>
+          {% else %}
+          <td>NotDone</td>
+          {% endif %} 
+       
 
         <td>
           <a
             class="btn btn-md btn-primary newreq"
-            href="{% url 'dept_confirm' item1.classification item1.id %}"
+            href="{% url 'dept_confirm' item1.class_cation item1.IdOrder %}"
             role="button"
             target="_blank"
             >check &raquo;</a
@@ -46,29 +49,34 @@
       </tr>
       {% else %}
        {% for id in Is_approved %}
-        {% if id.Path == "HR" and id.Option_dep == "approved" and id.IdOrder == item1.id%}
-      <tr class="warning">
-        <td>{{item1.id}}</td>
-        <td>{{item1.Full_Name}}</td>
-        <td>{{item1.Employee_Number}}</td>
-
-        {% if item1.id == item2.IdOrder %} {% if item2.State %}
-        <td>Done</td>
-        {% else %}
-        <td>NotDone</td>
-        {% endif %} {% endif %}
-
-        <td>
-          <a
-            class="btn btn-md btn-primary newreq"
-            href="{% url 'dept_confirm' item1.classification item1.id %}"
-            role="button"
-            target="_blank"
-            >check &raquo;</a
-          >
-        </td>
-      </tr>
-      {% endif %} {% endfor %} {% endif %} {%endfor%}
+        {% if id.Path == "HR" and id.Option_dep == "approved" and id.IdOrder == item1.IdOrder%}
+        <tr class="warning">
+          <td>{{item1.IdOrder}}</td>
+          <td>{{item1.NameUser}}</td>
+          <td>{{item1.NumJob}}</td>
+          
+          
+            {% if item1.State %}
+            <td>Done</td>
+            {% else %}
+            <td>NotDone</td>
+            {% endif %} 
+         
+  
+          <td>
+            <a
+              class="btn btn-md btn-primary newreq"
+              href="{% url 'dept_confirm' item1.class_cation item1.IdOrder %}"
+              role="button"
+              target="_blank"
+              >check &raquo;</a
+            >
+          </td>
+        </tr>
+      {% endif %}
+       {% endfor %} 
+       {% endif %} 
+       {%endfor%}
     </tbody>
   </table>
 </div>

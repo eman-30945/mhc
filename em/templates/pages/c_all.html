@@ -17,19 +17,19 @@
       </tr>
     </thead>
     <tbody>
-      {% for form  in  form%}
+      {% for x  in  form %}
         <tr class="table-warning" >
                     
-            <td >{{form.id}}</td>
-              {% if form.FinalStat == 'pending' %}
+            <td >{{x.id}}</td>
+              {% if x.FinalStat == 'pending' %}
               <td><i class="fa-solid fa-circle-minus text-warning" id="req"></i><b> pending</b></td>
-              {% elif form.FinalStat == 'approved'%}
+              {% elif x.FinalStat == 'approved'%}
               <td ><i class="fa-solid fa-circle-check text-success" id="req" ></i> <b> approved</b></td>
               {% else %}
               <td><i class="fa-solid fa-circle-xmark text-danger" id="req"></i><b> rejected</b></td>
               {% endif %}
-            <td>{{form.created}}</td> 
-            <td><a class="btn btn-sm btn-primary newreq" href="{% url 'c_currentstat' form.id form.classification %}" role="button" target="_blank">check  &raquo;</a ></td>
+            <td>{{x.created}}</td> 
+            <td><a class="btn btn-sm btn-primary newreq" href="{% url 'c_currentstat' x.id x.classification %}" role="button" target="_blank">check  &raquo;</a ></td>
               
           </tr>
           {% endfor %}
