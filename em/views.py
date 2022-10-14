@@ -437,6 +437,7 @@ def emp_form(request):
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
                                   Path='إدارة السكن Housing Management', Username="Housing_Management", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
+            
                                   Path='الصيدلية Pharmacy Dept', Username="Pharmacy_Dept", IdOrder=IDN, class_cation=classific).save()
             Doctor.objects.create(NumJob=EmployeeNumber, NameUser=fullname,
                                   Path='مراقبة انتظام دوام الموارد البشرية Monitoring the regularity of human resources', Username="Monitoring_the_regularity_of_human_resources", IdOrder=IDN, class_cation=classific).save()
